@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./app/css/main.css" />
+    <link rel="shortcut icon" href="./app/img/music.png" />
+    <script
+      src="https://kit.fontawesome.com/a5c52835dd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="music-player">
+        <nav>
+          <div class="circle">
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <div class="circle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+        <!-- Image of the song or album -->
+        <img
+          src="./app/music/cover/Nightmare.png"
+          alt="Album Nightmare"
+          class="song-img"
+        />
+        <h1>Nightmare</h1>
+        <p>Avenged Sevenfold</p>
+        <!-- Audio -->
+        <audio id="song">
+          <source
+            src="./app/music/songs/Avenged Sevenfold - Nightmare.mp3"
+            type="audio/mpeg"
+          />
+        </audio>
+        <!-- Progress of the audio -->
+        <input type="range" value="0" name="" id="progress" />
+        <!-- controls -->
+        <div class="controls">
+          <div><i class="fa-solid fa-backward"></i></div>
+          <div onclick="playPause()">
+            <i class="fa-solid fa-play" id="ctrIcon"></i>
+          </div>
+          <div><i class="fa-solid fa-forward"></i></div>
+        </div>
+      </div>
+    </div>
+    <script src="./app/js/index.js"></script>
+  </body>
+</html>
