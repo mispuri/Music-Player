@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
 
 * {
   padding: 0;
@@ -10,7 +10,7 @@
 .container {
   width: 100%;
   height: 100vh;
-  background: #231f20;
+  background: #121212;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +18,7 @@
 }
 
 .music-player {
-  background: #ffe0e5;
+  background: #202124;
   width: 400px;
   padding: 25px 35px;
   text-align: center;
@@ -37,26 +37,28 @@ nav .circle {
   line-height: 40px;
   background: #fff;
   color: #7fbbf9;
-  box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
+  box-shadow: 0 5px 10px rgba(2, 7, 32, 0.226);
 }
 
 .song-img {
   width: 220px;
   border-radius: 50%;
   border: 8px solid #fff;
-  box-shadow: 0 10px 60px rgba(255, 26, 26 0.22);
+  box-shadow: 0 10px 60px rgba(2, 7, 32, 0.226);
 }
 
 .music-player h1 {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 400;
-  color: #333;
+  color: #245588;
   margin-top: 20px;
+  font-family: 'Metal Mania', system-ui;
 }
 
 .music-player p {
-  font-size: 14px;
-  color: #333;
+  font-size: 20px;
+  color: #245588;
+  font-family: 'Metal Mania', system-ui;
 }
 
 #progress {
@@ -76,7 +78,7 @@ nav .circle {
   height: 30px;
   border-radius: 50%;
   border: 8px solid #fff;
-  box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+  box-shadow: 0 5px 5px rgba(2, 7, 32, 0.226);
 }
 
 .controls {
@@ -95,7 +97,7 @@ nav .circle {
   justify-content: center;
   border-radius: 50%;
   color: #245588;
-  box-shadow: 0 10px 20px rgba(255, 26, 26, 0.22);
+  box-shadow: 0 10px 20px rgba(2, 7, 32, 0.226);
   cursor: pointer;
 }
 
@@ -103,4 +105,38 @@ nav .circle {
   transform: scale(1.5);
   background: #245588;
   color: #fff;
+}
+
+#volume-container {
+  display: flex;
+  align-items: center;
+}
+
+#volume-icon {
+  margin-right: 5px;
+  color: #fff;
+}
+
+/* #volume-slider {
+  width: 100%;
+} */
+
+#volume-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #245588;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 40px 0;
+}
+
+#volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #245588;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  box-shadow: 0 5px 5px rgba(2, 7, 32, 0.226);
 }

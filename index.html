@@ -23,32 +23,37 @@
           </div>
         </nav>
         <!-- Image of the song or album -->
-        <img
-          src="./app/music/cover/Nightmare.png"
-          alt="Album Nightmare"
-          class="song-img"
-        />
-        <h1>Nightmare</h1>
-        <p>Avenged Sevenfold</p>
+        <img id="cover" src="" alt="Album" class="song-img" />
+        <h1 id="album"></h1>
+        <p id="title"></p>
         <!-- Audio -->
         <audio id="song">
-          <source
-            src="./app/music/songs/Avenged Sevenfold - Nightmare.mp3"
-            type="audio/mpeg"
-          />
+          <source src="" type="audio/mpeg" />
         </audio>
         <!-- Progress of the audio -->
-        <input type="range" value="0" name="" id="progress" />
+        <input type="range" value="0" name="song" id="progress" />
+        <!-- Sound bar -->
+        <div id="volume-container">
+          <i id="volume-icon" class="fa-solid fa-volume-high"></i>
+          <input type="range" value="100" max="100" id="volume-slider" />
+        </div>
         <!-- controls -->
         <div class="controls">
-          <div><i class="fa-solid fa-backward"></i></div>
+          <div onclick="prevSong()"><i class="fa-solid fa-backward"></i></div>
           <div onclick="playPause()">
             <i class="fa-solid fa-play" id="ctrIcon"></i>
           </div>
-          <div><i class="fa-solid fa-forward"></i></div>
+          <div onclick="nextSong()"><i class="fa-solid fa-forward"></i></div>
         </div>
       </div>
     </div>
-    <script src="./app/js/index.js"></script>
+    <script type="module" src="./app/js/index.js"></script>
+    <script>
+      window.addEventListener('load', function () {
+        loadSong();
+        setupVolumeControl();
+        setInitialVolume(10);
+      });
+    </script>
   </body>
 </html>
